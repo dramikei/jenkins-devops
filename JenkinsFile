@@ -1,5 +1,11 @@
-stage('build') {
-    steps {
-        sh 'python exam.py'
+pipeline {
+    agent any
+    stages {
+        stage("build") {
+            steps {
+                echo 'running build'
+                sh 'python exam.py'
+            }
+        }
     }
 }
